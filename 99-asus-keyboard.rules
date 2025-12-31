@@ -1,0 +1,20 @@
+# Keyboard Attached Pogo
+ACTION=="add", \
+KERNELS=="3-6", \
+SUBSYSTEM=="input", \
+ATTRS{busnum}=="3", \
+ATTRS{devpath}=="6", \
+ATTRS{idVendor}=="0b05", \
+ATTRS{idProduct}=="1b2c", \
+TAG+="systemd", \
+ENV{SYSTEMD_USER_WANTS}="monitor@0.service" 
+ 
+# Keyboard Detached Bluetooth
+ACTION=="add", \
+SUBSYSTEM=="input", \
+ATTRS{id/vendor}=="0b05", \
+ATTRS{id/product}=="1b2d", \
+ATTRS{name}=="ASUS Zenbook Duo Keyboard", \
+ATTRS{id/bustype}=="0005", \
+TAG+="systemd", \
+ENV{SYSTEMD_USER_WANTS}="monitor@1.service"

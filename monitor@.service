@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor control (%i)
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+#ExecStart=/bin/sh -c 'logger TESTING'
+ExecStart=/usr/local/bin/monitor.sh %i 
+
+[Install]
+WantedBy=default.target
