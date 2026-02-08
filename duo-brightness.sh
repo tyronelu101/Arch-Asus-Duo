@@ -1,8 +1,9 @@
 
 if [ -z $1 ]; then
-  echo "Testing."
+  echo "Please enter a valid value [1-400]"
   exit 0
 fi
+
 
 monitor_1=$1
 monitor_2=$1
